@@ -1,0 +1,40 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+mouse = true
+scrolloff = 10
+cursorline = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+C-s = ":w" # Maps the Control-s to the typable command :w which is an alias for :write (save file)
+C-o = ":open ~/.config/helix/config.toml" # Maps the Control-o to opening of the helix config file
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+m = { k = ["extend_line_below", "delete_selection", "move_line_up", "paste_before", "move_line_up"] }  # move line up
+m = { j = ["extend_line_below", "delete_selection", "paste_after", "move_line_down"] } # move line down
+
+[keys.insert]
+C-s = ["normal_mode", ":w"]
+# testjjjjjano
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
