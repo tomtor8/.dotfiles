@@ -39,9 +39,9 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
 alias ls="exa --group-directories-first --icons"
 alias la="exa -a --group-directories-first --icons"
-alias ll="exa -lhm --group-directories-first --icons"
+alias ll="exa -lhm --group-directories-first --icons --links"
 alias llt="exa -lhm --tree --level=2 --group-directories-first --icons"
-alias lla="ls -alhm --group-directories-first --icons"
+alias lla="ls -alhm --group-directories-first --icons --links"
 # sort by time modified fromt the newest
 alias llm="exa -lhm --group-directories-first --icons -s=modified -r"
 # sort by size from the biggest
