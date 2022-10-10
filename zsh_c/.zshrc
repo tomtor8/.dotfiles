@@ -70,6 +70,7 @@ alias bukutobak="cat ~/.local/share/buku/bookmarks.db > ~/pCloud\ Drive/Repo/App
 alias baktobuku="cat ~/pCloud\ Drive/Repo/Apps/buku_bookmarks/bookmarks_bak.db > ~/.local/share/buku/bookmarks.db" 
 alias zshrctobak="cat ~/.zshrc > ~/pCloud\ Drive/Repo/Apps/ZSH_config/zsh_mac/zshrc_bak"
 
+alias python="python3"
 
 # PATH
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
