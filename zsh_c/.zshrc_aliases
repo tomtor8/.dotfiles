@@ -1,0 +1,33 @@
+alias ls="exa --group-directories-first --icons"
+alias la="exa -a --group-directories-first --icons"
+alias ll="exa -lhm --group-directories-first --icons --links"
+alias llt="exa -lhm --tree --level=2 --group-directories-first --icons"
+alias lla="ls -alhm --group-directories-first --icons --links"
+# sort by time modified fromt the newest
+alias llm="exa -lhm --group-directories-first --icons -s=modified -r"
+# sort by size from the biggest
+alias lls="exa -lhm --group-directories-first --icons -s=size -r"
+
+alias zshconfig="nvim ~/.zshrc"
+alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
+
+alias tree="tree -C"
+
+alias vim="nvim"
+
+# Cheatsheet alias
+alias cs="zsh ~/bin/cht.sh"
+
+# weather alias
+alias weather="curl https://wttr.in/Kosice"
+
+
+# buku bookmarks aliases
+alias bukus="buku --deep"
+alias bukut="buku -t"
+
+# backups
+alias zshrctobak="cat ~/.zshrc > ~/pCloud\ Drive/Repo/Apps/ZSH_config/zsh_mac/zshrc_bak"
+
+alias python="python3"
+
