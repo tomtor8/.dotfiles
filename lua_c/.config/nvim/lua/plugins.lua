@@ -41,8 +41,6 @@ require('packer').startup({function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
-    --use 'hrsh7th/cmp-vsnip'
-    --use 'hrsh7th/vim-vsnip'
     use 'folke/which-key.nvim'
     use 'numToStr/Comment.nvim'
     -- LuaSnip
@@ -56,6 +54,7 @@ require('packer').startup({function()
     use 'folke/zen-mode.nvim'
     use 'luukvbaal/nnn.nvim'
     use 'nacro90/numb.nvim'
+    use 'neovim/nvim-lspconfig'
     -- other packages
 end, 
   config = {

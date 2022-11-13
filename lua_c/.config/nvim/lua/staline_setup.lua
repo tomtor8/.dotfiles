@@ -37,8 +37,8 @@ require('staline').setup {
     },
     sections = {
         left = { '-mode', 'right_sep', 'branch', },
-        mid  = { 'cwd' },
-        right = { 'left_sep', '-line_column' },
+        mid  = { 'cwd', 'lsp_name' },
+        right = { 'lsp', 'left_sep','-line_column' },
     },
     special_table = {
         NvimTree = { 'NvimTree', ' ' },
