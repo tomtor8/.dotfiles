@@ -41,6 +41,7 @@ require('packer').startup({function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
     use 'folke/which-key.nvim'
     use 'numToStr/Comment.nvim'
     -- LuaSnip

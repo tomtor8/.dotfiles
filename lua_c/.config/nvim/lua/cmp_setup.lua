@@ -24,8 +24,8 @@ cmp.setup({
     ['<Tab>'] = cmp.mapping.confirm({ select = true }),
   }),
   sources = cmp.config.sources({
-    --{ name = 'vsnip' }, -- For vsnip users.
-    { name = 'luasnip' }, -- For luasnip users.
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   }, {
     { name = 'buffer' },
   })
@@ -52,9 +52,36 @@ cmp.setup.cmdline(':', {
 -- use buffer and path source for all documents 
 cmp.setup({
   sources = {	
+    { name = 'nvim_lsp'},
     { name = 'path' },
     { name = 'luasnip' },
     { name = 'buffer', max_item_count = 4 },
   },
 })  
+
+-- set up lspconfig
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require'lspconfig'.html.setup {
+  capabilities = capabilities
+}
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities
+}
+  
+require'lspconfig'.pyright.setup {
+  capabilities = capabilities
+}
+
+require'lspconfig'.sumneko_lua.setup {
+  capabilities = capabilities
+}
+
+require'lspconfig'.tsserver.setup {
+  capabilities = capabilities
+}
+
+require'lspconfig'.bashls.setup {
+   capabilities = capabilities
+}
 
