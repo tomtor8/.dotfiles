@@ -12,7 +12,7 @@ require('staline').setup {
         bg              = "none",     -- Default background is transparent.
         inactive_color  = "#303030",
         inactive_bgcolor = "none",
-        true_colors     = false,      -- true lsp colors.
+        true_colors     = true,      -- true lsp colors.
         font_active     = "none",     -- "bold", "italic", "bold,italic", etc
 
         mod_symbol      = "  ",
@@ -37,8 +37,8 @@ require('staline').setup {
     },
     sections = {
         left = { '-mode', 'right_sep', 'branch', },
-        mid  = { 'cwd', 'lsp_name' },
-        right = { 'lsp', 'left_sep','-line_column' },
+        mid  = { 'cwd' },
+        right = { 'lsp_name', ' ', 'lsp', 'left_sep','-line_column' },
     },
     special_table = {
         NvimTree = { 'NvimTree', ' ' },
@@ -48,6 +48,6 @@ require('staline').setup {
         Error=" ",
         Info=" ",
         Warn=" ",
-        Hint="",
+        Hint=" ",
     },
 }
