@@ -5,10 +5,11 @@ require('stabline').setup {
   	-- stab_left = " ✻",
   	stab_left = "",
 
-	bg = "#3a4040",
-	fg = "#ABB2BF",
-	inactive_fg = "grey",
-	inactive_bg = "#282C34",
+	bg = "#979eab",
+	fg = "#282c34",
+	inactive_fg = "#abb2bf",
+	-- inactive_bg = "#282C34",
+  inactive_bg = "#282c34",
 	stab_bg = "#282C34",
 
 	font_active = "bold",
