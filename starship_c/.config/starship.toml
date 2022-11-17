@@ -2,6 +2,13 @@
 [package]
 disabled = false
 
+[nodejs]
+# disable the package module in the prompt
+disabled = true
+
+[python]
+format = "via [${symbol}${pyenv_prefix}(${version} )(<$virtualenv>)]($style)"
+
 # Replace the "❯" symbol in the prompt with ""
 [character] 
 success_symbol = ""
