@@ -30,7 +30,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 source ~/.zshrc_aliases
 
 # PATH
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # fzf
