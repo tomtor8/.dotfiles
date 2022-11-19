@@ -1,6 +1,7 @@
 [cmd_duration]
 show_milliseconds = true
 min_time = 500
+format = "[*$duration*](bold yellow)"
 
 [directory]
 read_only = " "
@@ -65,7 +66,7 @@ symbol = " "
 symbol = "🅢 "
 
 [time]
-disabled = false
+disabled = true
 time_format = "%R" # Hour:Minute Format
 format = "⏲ $time "
 
@@ -80,5 +81,5 @@ format = "via [${symbol}${pyenv_prefix}(${version} )(<$virtualenv>)]($style)"
 
 # Replace the "❯" symbol in the prompt
 [character]
-success_symbol = "[ ✓](bold green)"
-error_symbol = "[ ✗](bold red)" 
+success_symbol = "[✓](bold green)"
+error_symbol = "[✗](bold red)" 
