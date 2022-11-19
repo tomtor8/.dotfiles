@@ -7,7 +7,7 @@ require("toggleterm").setup {
 	      return vim.o.columns * 0.4
 	    end
 	  end,
-	open_mapping = [[c-\>]],
+	-- open_mapping = [[c-\>]],
 	shade_filetypes = {},
 	shade_terminals = true,
 	shading_factor = 2,
@@ -20,6 +20,6 @@ require("toggleterm").setup {
 		border = "double",
 		width = 40,
 		height = 20,
-		winblend = 3,	
+		winblend = 3,
 	},
 }

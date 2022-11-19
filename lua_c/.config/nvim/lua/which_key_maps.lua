@@ -1,17 +1,6 @@
 local wk = require("which-key")
 
 local mappings = {
-  b = {
-    name = "BUFFLINE", -- optional group name
-    a = { ":BufferLinePick<cr>", "Pick Tab" },
-    c = { ":BufferLinePickClose<cr>", "Close Pick" },
-    l = { ":BufferLineCloseLeft<cr>", "Close Left" },
-    n = { ":BufferLineCycleNext<cr>", "Cycle Next" },
-    p = { ":BufferLineCyclePrev<cr>", "Cycle Prev" },
-    r = { ":BufferLineCloseRight<cr>", "Close Right" },
-    s = { ":BufferLineSortByTabs<cr>", "Sort Tabs" },
-    t = { ":BufferLineTogglePin<cr>", "Toggle Pin" },
-  },
   f = {
     name = "FILE&FMT",
     f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- % is a placeholder for the full path of the buffer file
@@ -33,7 +22,6 @@ local mappings = {
     name = "LINT",
     s = { ":w<cr>:!shellcheck %<cr>", "Shellcheck" },
   },
-  
   q = {
     name = "Quit&Nosave",
     q = { "<cmd>q!<cr>", "Quit Buffer" },
