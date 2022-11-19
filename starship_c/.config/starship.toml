@@ -1,10 +1,6 @@
-
-
 [cmd_duration]
 show_milliseconds = true
 min_time = 500
-
-# You can also replace your username with a neat symbol like  to save some space
 
 [directory]
 read_only = " "
@@ -84,5 +80,5 @@ format = "via [${symbol}${pyenv_prefix}(${version} )(<$virtualenv>)]($style)"
 
 # Replace the "❯" symbol in the prompt
 [character]
-success_symbol = "[✓](bold green)"
-error_symbol = "[✗](bold red)" 
+success_symbol = "[ ✓](bold green)"
+error_symbol = "[ ✗](bold red)" 
