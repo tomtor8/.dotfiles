@@ -30,7 +30,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 source ~/.zshrc_aliases
 
 # PATH
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # fzf
@@ -44,9 +44,6 @@ source ~/.dotfiles/nnn_c/.config/nnn/nnn.config
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# this loads nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
 # syntax highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
