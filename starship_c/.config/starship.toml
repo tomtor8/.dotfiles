@@ -1,19 +1,88 @@
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = false
 
-[nodejs]
-# disable the package module in the prompt
-disabled = true
 
-[python]
-format = "via [${symbol}${pyenv_prefix}(${version} )(<$virtualenv>)]($style)"
+[cmd_duration]
+show_milliseconds = true
+min_time = 500
 
-# Replace the "❯" symbol in the prompt with ""
-[character] 
-success_symbol = ""
+# You can also replace your username with a neat symbol like  to save some space
+
+[directory]
+read_only = " "
+truncation_length = 2
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[git_branch]
+symbol = " "
 
 [git_status]
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
+
+[aws]
+symbol = " "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[package]
+symbol = " "
+disabled = false
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+format = "⏲ $time "
+
+ 
+# [nodejs]
+# disable the package module in the prompt
+# disabled = true
+ 
+[python]
+symbol = " "
+format = "via [${symbol}${pyenv_prefix}(${version} )(<$virtualenv>)]($style)"
+
+# Replace the "❯" symbol in the prompt
+[character]
+success_symbol = "[✓](bold green)"
+error_symbol = "[✗](bold red)" 
