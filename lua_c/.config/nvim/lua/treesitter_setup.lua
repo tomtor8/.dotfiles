@@ -10,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
   },
   autotag = {
   	enable = true,
-  },	
+  },
   -- Automatically install missing parsers when entering buffer
   auto_install = true,
 
