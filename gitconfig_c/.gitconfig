@@ -1,0 +1,15 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = tomtor8
+	email = tomas.torday@gmail.com
+[core]
+	editor = nvim
+  excludesfile = ~/.gitignore_global
+[alias]
+  loga = log --oneline --graph --all
+  cm = commit -m
+  s = status
