@@ -1,7 +1,7 @@
 [cmd_duration]
-show_milliseconds = true
-min_time = 500
-format = "[*$duration*](bold yellow)"
+show_milliseconds = false
+min_time = 1000
+format = "⏲ [$duration](bold yellow)"
 
 [directory]
 read_only = " "
@@ -38,6 +38,7 @@ symbol = " "
 symbol = " "
 
 [nodejs]
+disabled = false
 symbol = " "
 
 [conda]
@@ -76,6 +77,7 @@ format = "⏲ $time "
 # disabled = true
  
 [python]
+disabled = false
 symbol = " "
 format = "via [${symbol}${pyenv_prefix}(${version} )(<$virtualenv>)]($style)"
 
