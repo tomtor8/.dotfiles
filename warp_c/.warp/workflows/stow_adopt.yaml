@@ -1,0 +1,21 @@
+---
+name: Stow and adopt a file in dotfiles
+command: "stow --adopt -{{flags}} --target=/Users/{{username}} {{directory_to_stow_in}}"
+tags:
+  - backup
+  - stow
+  - dotfiles
+description: Stow and adopt a file in dotfiles
+arguments:
+  - name: flags
+    description: n flag denotes dry run
+    default_value: vn
+  - name: username
+    description: tomastorday on macmini, tom on macbook
+    default_value: tomastorday
+  - name: directory_to_stow_in
+    description: The directory to stow and adopt a file
+    default_value: ~
+author: Tom Torday
+shells: []
+
