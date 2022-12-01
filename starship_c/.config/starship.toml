@@ -1,3 +1,5 @@
+command_timeout = 1000
+
 [cmd_duration]
 show_milliseconds = false
 min_time = 1000
