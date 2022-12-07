@@ -8,7 +8,10 @@ HISTFILE=~/.zsh_history
 ##############
 
 # zsh-autocomplete
-source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+if [[ -f /Users/tomastorday/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
+  source /Users/tomastorday/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+fi
+
 # enable colors in autocomplete for directories, files, aliases and commands
 export CLICOLOR=1
 zstyle ':completion:*:default' list-colors ''
@@ -20,9 +23,15 @@ zstyle ':completion:*:commands' list-colors '=*=1;31'
 zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
 
 # zsh-z 
-source ~/.config/zsh/zsh-z.plugin.zsh
+if [[ -f /Users/tomastorday/.config/zsh/zsh-z.plugin.zsh ]]; then
+  source /Users/tomastorday/.config/zsh/zsh-z.plugin.zsh
+fi
+
 # zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 # styling of autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
@@ -40,13 +49,16 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range :500 {}'"
 
 # nnn
-source ~/.dotfiles/nnn_c/.config/nnn/nnn.config
+if [[ -f /Users/tomastorday/.dotfiles/nnn_c/.config/nnn/nnn.config ]]; then
+  source /Users/tomastorday/.dotfiles/nnn_c/.config/nnn/nnn.config
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 # syntax highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
