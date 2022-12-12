@@ -1,35 +1,42 @@
 -- vim.g.completeopt="menu,menuone,noselect,noinsert"
 -- vim-snip --
 
-local cmp = require'cmp'
-local luasnip = require('luasnip')
+local cmp = require("cmp")
+local luasnip = require("luasnip")
 
-cmp.setup({
+cmp.setup {
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-    --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-    luasnip.lsp_expand(args.body) -- For `luasnip` users.
+    luasnip.lsp_expand(args.body)
     end,
   },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.abort(),
-    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-  }),
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-  }, {
-    { name = 'buffer' },
-  })
-})
+  mapping = cmp.mapping.preset.insert {
+    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-e>"] = cmp.mapping.abort(),
+    ["<Esc>"] = cmp.mapping.close(),
+    ["<Tab>"] = cmp.mapping.confirm { select = true },
+  },
+  sources = {
+    { name = "nvim_lsp" },
+    { name = "luasnip" },
+    { name = "buffer", keyword_length = 3, max_item_count = 5 },
+    { name = "path" },
+    { name = "emoji", insert = true },
+  },
+  completion = {
+  	keyword_length = 2,
+  	completeopt = "menu,noselect",
+  },
+  view = {
+  	entries = "custom",
+  },
+}
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
@@ -49,15 +56,13 @@ cmp.setup.cmdline(':', {
   })
 })
 
--- use buffer and path source for all documents 
-cmp.setup({
-  sources = {	
-    { name = 'nvim_lsp'},
-    { name = 'path' },
-    { name = 'luasnip' },
-    { name = 'buffer', max_item_count = 4 },
-  },
-})  
+cmp.setup.filetype("tex", {
+	sources = {
+		{ name = "luasnip" },
+		{ name = "buffer", keyword_length = 3 },
+		{ name = "path" },
+	},
+})
 
 -- set up lspconfig
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -78,7 +83,8 @@ require'lspconfig'.sumneko_lua.setup {
 }
 
 require'lspconfig'.tsserver.setup {
-  capabilities = capabilities
+  capabilities = capabilities,
+  root_dir = function() return vim.loop.cwd() end
 }
 
 require'lspconfig'.bashls.setup {

@@ -56,6 +56,10 @@ require('packer').startup({function()
     use 'luukvbaal/nnn.nvim'
     use 'nacro90/numb.nvim'
     use 'neovim/nvim-lspconfig'
+    use {
+        "kylechui/nvim-surround",
+        tag = "*", 
+        }
     -- other packages
 end, 
   config = {
