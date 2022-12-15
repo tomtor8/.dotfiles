@@ -1,0 +1,17 @@
+---
+name: Autoformat a lua file with lua-format
+command: "lua-format -i --indent-width={{indent_width}} {{file_name}}"
+tags:
+  - formatter
+  - lua
+description: Format a lua file with lua-format
+arguments:
+  - name: indent_width
+    description: The width of indentation in spaces
+    default_value: 2
+  - name: file_name
+    description: The name of the formatted file
+    default_value: ~
+author: Tom Torday
+shells: []
+
