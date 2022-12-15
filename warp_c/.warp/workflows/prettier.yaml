@@ -1,0 +1,14 @@
+---
+name: Autoformat a file with prettier
+command: "npx prettier -w {{file_name}}"
+tags:
+  - formatter
+  - prettier
+description: Format a file with prettier
+arguments:
+  - name: file_name
+    description: The file you want to format
+    default_value: ~
+author: Tom Torday
+shells: []
+
