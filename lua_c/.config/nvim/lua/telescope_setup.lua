@@ -1,5 +1,5 @@
-require('telescope').setup{
-defaults = {
+require('telescope').setup {
+  defaults = {
     layout_config = {
       width = 0.75,
       prompt_position = "top",
@@ -8,7 +8,8 @@ defaults = {
       vertical = {mirror = false}
     },
     find_command = {
-      'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'
+      'rg', '--no-heading', '--with-filename', '--line-number', '--column',
+      '--smart-case'
     },
     prompt_prefix = " ",
     selection_caret = " ",
@@ -32,17 +33,17 @@ defaults = {
     qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
     mappings = {
-            i = {
+      i = {
         -- map actions.which_key to <C-h> (default: <C-/>)
         -- actions.which_key shows the mappings for your picker,
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
         ["<C-h>"] = "which_key"
-			},
---      n = {
---        ["<C-j>"] = actions.move_selection_next,
---        ["<C-k>"] = actions.move_selection_previous,
---        ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist
---      }
+      }
+      --      n = {
+      --        ["<C-j>"] = actions.move_selection_next,
+      --        ["<C-k>"] = actions.move_selection_previous,
+      --        ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist
+      --      }
     }
   }
 }

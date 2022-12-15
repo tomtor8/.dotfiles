@@ -13,14 +13,14 @@ local rep = require('luasnip.extras').rep
 
 local snippets, autosnippets = {}, {}
 
-local group = vim.api.nvim_create_augroup('Lua Snippets', { clear = true })
+local group = vim.api.nvim_create_augroup('Lua Snippets', {clear = true})
 local file_pattern = '*.css'
 
 -- basic Snippets --
 -- local printPy = s('print', {
-	-- t('print("'),
-	-- i(1, "text"), -- position and placeholder text
-	-- t('")')
+-- t('print("'),
+-- i(1, "text"), -- position and placeholder text
+-- t('")')
 -- --	t({ '', 'This is another text.' }), --table creates new line with ''
 -- --	i(2,'second placeholder'),
 -- })
@@ -31,19 +31,11 @@ local file_pattern = '*.css'
 -- add 2 braces to write curly braces
 -- i is insert node, c is choice node, t is text node
 
-local bracketExpand = s(
-  'br',
-  fmt(
-    [[
+local bracketExpand = s('br', fmt([[
 {{
   {}: ;
 }}
-]],
-    {
-      i(1, 'property'),
-    }
-  )
-)
+]], {i(1, 'property')}))
 
 table.insert(snippets, bracketExpand)
 

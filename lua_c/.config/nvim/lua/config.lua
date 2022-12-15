@@ -1,9 +1,8 @@
---syntax vim.o globals, vim.bo buffer specific, vim.wo window specific
+-- syntax vim.o globals, vim.bo buffer specific, vim.wo window specific
 -- vim.opt. is working for almost everything e.g. vim.opt.termguicolors = true
 -- or vim.cmd[[vim command]]
-
 -- enables syntax highlighting
-vim.cmd[[syntax on]]
+vim.cmd [[syntax on]]
 vim.cmd('filetype plugin indent on')
 -- disable shortmessages
 vim.o.shortmess = 'nmtToOFcw'
@@ -17,7 +16,7 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 
 vim.opt.smartindent = true
---vim.opt.indentexpr = ""
+-- vim.opt.indentexpr = ""
 vim.opt.shiftwidth = 2
 
 vim.o.timeoutlen = 500
@@ -32,10 +31,10 @@ vim.wo.relativenumber = true
 -- enable mouse support
 vim.o.mouse = "a"
 
---better colors
+-- better colors
 vim.opt.termguicolors = true
 
---hightlights the matched text pattern when searching
+-- hightlights the matched text pattern when searching
 vim.o.incsearch = true
 
 -- open splits intuitively
@@ -45,7 +44,7 @@ vim.o.splitright = true
 vim.opt.showtabline = 2
 -- disable show mode at the bottom
 
-vim.opt.laststatus=3
+vim.opt.laststatus = 3
 
 vim.o.showmode = false
 
