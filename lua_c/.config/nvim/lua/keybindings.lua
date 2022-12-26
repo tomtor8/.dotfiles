@@ -11,6 +11,14 @@ keymap('i', 'jk', '<Esc>', opts)
 keymap('n', '<Tab>', ':bn<cr>', opts)
 -- cycle through buffers backwards with shift tab
 keymap('n', '<S-Tab>', ':bp<cr>', opts)
+-- surround a word with quotes and brackets
+keymap('n', '<leader>"', 'viw<esc>a"<esc>bi"<esc>lel', opts)
+keymap('n', "<leader>'", "viw<esc>a'<esc>bi'<esc>lel", opts)
+keymap('n', '<leader>)', 'viw<esc>a)<esc>bi(<esc>lel', opts)
+keymap('n', '<leader>>', 'viw<esc>a><esc>bi<<esc>lel', opts)
+keymap('n', '<leader>}', 'viw<esc>a}<esc>bi{<esc>lel', opts)
+keymap('n', '<leader>]', 'viw<esc>a]<esc>bi[<esc>lel', opts)
+keymap('n', '<leader>`', 'viw<esc>a`<esc>bi`<esc>lel', opts)
 
 -- keymap('n', '<space>fs', ':write<CR>', opts)
 -- toggle nvimtree
