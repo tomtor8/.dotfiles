@@ -40,13 +40,14 @@ symbol = " "
 symbol = " "
 
 [nodejs]
-disabled = false
+disabled = true
 symbol = " "
 
 [conda]
 symbol = " "
 
 [lua]
+disabled = true
 symbol = " "
 
 [memory_usage]
@@ -79,7 +80,7 @@ format = "⏲ $time "
 # disabled = true
  
 [python]
-disabled = false
+disabled = true
 symbol = " "
 format = "via [${symbol}${pyenv_prefix}(${version} )(<$virtualenv>)]($style)"
 

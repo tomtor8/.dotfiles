@@ -3,12 +3,13 @@ local wk = require("which-key")
 local mappings = {
   f = {
     name = "FILE&FMT",
+    b = {":!black %<cr>", "Black py formatter"},
     f = {"<cmd>Telescope find_files<cr>", "Find File"}, -- % is a placeholder for the full path of the buffer file
     g = {"<cmd>Telescope live_grep<cr>", "Find Text"},
     n = {"<cmd>NnnPicker<cr>", "NNN picker"},
-    p = {":w<cr>:!npx prettier --write %<cr>", "Prettier: i Ctrl+S"},
+    p = {":!prettier -w %<cr>", "Prettier formatter"},
     r = {"<cmd>Telescope oldfiles theme=dropdown<cr>", "Recent Files"}, -- additional options for creating the keymap
-    s = {":w<cr>:!shfmt -w %<cr>", "Shfmt: shellscript"},
+    s = {":!shfmt -w %<cr>", "Shfmt formatter"},
     t = {"<cmd>NvimTreeToggle<cr>", "Toggle NvimTree"}
   },
   g = {
