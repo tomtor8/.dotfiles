@@ -60,6 +60,12 @@ if [[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.
   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+# my custom shell functions
+
+if [[ -f /Users/tomastorday/.dotfiles/shellfunctions ]]; then
+  source /Users/tomastorday/.dotfiles/shellfunctions
+fi
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
