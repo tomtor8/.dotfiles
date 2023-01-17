@@ -5,6 +5,7 @@ require('packer').startup({
     use 'ellisonleao/gruvbox.nvim'
     use 'sainnhe/gruvbox-material'
     use 'tamton-aquib/staline.nvim'
+    use 'lewis6991/gitsigns.nvim'
     use 'uga-rosa/ccc.nvim'
     use 'rmehri01/onenord.nvim'
     use 'navarasu/onedark.nvim'

@@ -58,7 +58,7 @@ vim.o.pumheight = 20
 -- navigate buffers without losing unsaved work
 vim.o.hidden = true
 
-vim.wo.signcolumn = 'number'
+vim.wo.signcolumn = 'yes'
 
 -- start scrolling when 8 lines from top or bottom
 vim.o.scrolloff = 20
