@@ -31,8 +31,6 @@ C-s = ":w" # Maps the Control-s to the typable command :w which is an alias for 
 C-o = ":open ~/.config/helix/config.toml" # Maps the Control-o to opening of the helix config file
 g = { a = "code_action" } # Maps `ga` to show possible code actions
 "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
-m = { k = ["extend_line_below", "delete_selection", "move_line_up", "paste_before", "move_line_up"] }  # move line up
-m = { j = ["extend_line_below", "delete_selection", "paste_after", "move_line_down"] } # move line down
 
 [keys.insert]
 C-s = ["normal_mode", ":w"]
