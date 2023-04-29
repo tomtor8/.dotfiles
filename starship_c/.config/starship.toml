@@ -10,6 +10,15 @@ read_only = " "
 truncation_length = 2
 truncation_symbol = "…/"
 
+# shell indicators
+[shell]
+bash_indicator = 'B☺︎'
+zsh_indicator = 'Z☻'
+powershell_indicator = 'PS⚛︎'
+unknown_indicator = 'mystery shell'
+style = 'red bold'
+disabled = false
+
 # Here is how you can shorten some long paths by text replacement
 [directory.substitutions]
 "Documents" = " "
