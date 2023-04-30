@@ -1,9 +1,19 @@
 command_timeout = 1000
 
+# A continuation prompt that displays two filled in arrows
+continuation_prompt = '▶▶ '
+
+[username]
+style_user = 'red bold'
+style_root = 'green bold'
+format = '[$user]($style) '
+disabled = true
+show_always = false
+
 [cmd_duration]
 show_milliseconds = false
 min_time = 1000
-format = "⏲ [$duration](bold yellow)"
+format = " [$duration](bold yellow)"
 
 [directory]
 read_only = " "
@@ -12,16 +22,16 @@ truncation_symbol = "…/"
 
 # shell indicators
 [shell]
-bash_indicator = 'B☺︎'
-zsh_indicator = 'Z☻'
-powershell_indicator = 'PS⚛︎'
+bash_indicator = '󱆃'
+zsh_indicator = ''
+powershell_indicator = '󰨊'
 unknown_indicator = 'mystery shell'
 style = 'red bold'
 disabled = false
 
 # Here is how you can shorten some long paths by text replacement
 [directory.substitutions]
-"Documents" = " "
+"Documents" = ""
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
