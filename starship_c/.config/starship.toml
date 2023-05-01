@@ -7,8 +7,8 @@ continuation_prompt = '▶▶ '
 style_user = 'red bold'
 style_root = 'green bold'
 format = '[$user]($style) '
-disabled = true
-show_always = false
+disabled = false
+show_always = true
 
 [cmd_duration]
 show_milliseconds = false
