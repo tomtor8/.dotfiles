@@ -53,6 +53,9 @@ if [[ -f /Users/tomastorday/.dotfiles/nnn_c/.config/nnn/nnn.config ]]; then
   source /Users/tomastorday/.dotfiles/nnn_c/.config/nnn/nnn.config
 fi
 
+# cd into folder with xplr
+alias xcd='cd "$(xplr --print-pwd-as-result)"'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # syntax highlighting
