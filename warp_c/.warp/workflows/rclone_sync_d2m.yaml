@@ -1,0 +1,18 @@
+---
+name: Rclone sync obsidian drive to mac
+command: "rclone sync {{target}} /Users/{{username}}/Documents/Obsidian/ --interactive --exclude='.obsidian/**' --exclude='.DS_Store' -n"
+tags:
+  - backup
+  - sync
+  - gdrive
+  - pcloud
+description: Sync using rclone from gdrive or pcloud to mac
+arguments:
+  - name: username
+    description: tomastorday on macmini and tom on macbook
+    default_value: tomastorday
+  - name: target
+    description: sync destination folder
+    default_value: gdrive:Obsidian/
+author: Tom Torday
+shells: []
