@@ -44,7 +44,7 @@ export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
 # fzf
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border --inline-info --margin=1 --padding=1 --color=spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
-export FZF_DEFAULT_COMMAND='fd --type f --hidden'
+export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range :500 {}'"
 
@@ -59,9 +59,6 @@ tere() {
     [ -n "$result" ] && cd -- "$result"
 }
 
-# cd into folder with xplr
-alias xcd='cd "$(xplr --print-pwd-as-result)"'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # syntax highlighting
@@ -71,8 +68,8 @@ fi
 
 # my custom shell functions
 
-if [[ -f /Users/tomastorday/.dotfiles/shellfunctions ]]; then
-  source /Users/tomastorday/.dotfiles/shellfunctions
+if [[ -f /Users/tomastorday/.dotfiles/shellfunctions.sh ]]; then
+  source /Users/tomastorday/.dotfiles/shellfunctions.sh
 fi
 
 # pyenv
