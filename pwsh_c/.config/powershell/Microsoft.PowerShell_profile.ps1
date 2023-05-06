@@ -9,6 +9,16 @@ function Get-CmdletAlias ($cmdletname)
 # aliases
 New-Alias -Name ca -Value Get-CmdletAlias
 
+# tere directory browser
+function Invoke-Tere()
+{
+  $result = . (Get-Command -CommandType Application tere) $args
+  if ($result)
+  {
+    Set-Location $result
+  }
+}
+Set-Alias tere Invoke-Tere
 
 # function CustomizeConsole
 # {
