@@ -1,4 +1,4 @@
-# MATH
+#!/bin/bash
 
 # factorial
 # x! = x * (x-1)!

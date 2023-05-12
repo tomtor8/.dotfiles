@@ -8,8 +8,8 @@ HISTFILE=~/.zsh_history
 ##############
 
 # zsh-autocomplete
-if [[ -f /Users/tomastorday/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
-  source /Users/tomastorday/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+if [[ -f ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
+  source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 fi
 
 # enable colors in autocomplete for directories, files, aliases and commands
@@ -23,8 +23,8 @@ zstyle ':completion:*:commands' list-colors '=*=1;31'
 zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
 
 # zsh-z 
-if [[ -f /Users/tomastorday/.config/zsh/zsh-z.plugin.zsh ]]; then
-  source /Users/tomastorday/.config/zsh/zsh-z.plugin.zsh
+if [[ -f ~/.config/zsh/zsh-z.plugin.zsh ]]; then
+  source ~/.config/zsh/zsh-z.plugin.zsh
 fi
 
 # zsh-autosuggestions
@@ -49,8 +49,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range :500 {}'"
 
 # nnn
-if [[ -f /Users/tomastorday/.dotfiles/nnn_c/.config/nnn/nnn.config ]]; then
-  source /Users/tomastorday/.dotfiles/nnn_c/.config/nnn/nnn.config
+if [[ -f ~/.dotfiles/nnn_c/.config/nnn/nnn.config ]]; then
+  source ~/.dotfiles/nnn_c/.config/nnn/nnn.config
 fi
 
 # tere directory navigator
@@ -68,8 +68,8 @@ fi
 
 # my custom shell functions
 
-if [[ -f /Users/tomastorday/.dotfiles/shellfunctions.sh ]]; then
-  source /Users/tomastorday/.dotfiles/shellfunctions.sh
+if [[ -f ~/.dotfiles/shellfunctions.sh ]]; then
+  source ~/.dotfiles/shellfunctions.sh
 fi
 
 # pyenv
