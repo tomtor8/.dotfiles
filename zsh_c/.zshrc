@@ -78,4 +78,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # starship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+source ~/.zshrc_prompt

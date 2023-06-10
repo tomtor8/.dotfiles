@@ -1,0 +1,9 @@
+# git info
+# autoload -Uz vcs_info
+# precmd() { vcs_info }
+# zstyle ':vcs_info:*' formats ' %F{yellow}%s(%b)%f' # git(main)
+
+PROMPT='
+%F{yellow}%2~%f
+%F{red}>%f '
+# RPROMPT='$vcs_info_msg_0_'
