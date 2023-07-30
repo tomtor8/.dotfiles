@@ -7,6 +7,11 @@ HISTFILE=~/.zsh_history
 ## SOURCING ##
 ##############
 
+# pure 
+fpath+=($HOME/.config/zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
+
 # zsh-autocomplete
 if [[ -f ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
   source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -33,7 +38,7 @@ if [[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; 
 fi
 
 # styling of autosuggestions
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=245"
 
 # ALIASES
 source ~/.zshrc_aliases
@@ -79,4 +84,4 @@ eval "$(pyenv init -)"
 
 # starship
 # eval "$(starship init zsh)"
-source ~/.zshrc_prompt
+# source ~/.zshrc_prompt
