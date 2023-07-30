@@ -34,3 +34,10 @@ alias python="python3"
 # quick cd into folders
 # cd into folder with xplr
 alias xcd='cd "$(xplr --print-pwd-as-result)"'
+
+# cd to icloud drive
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+
+# make copy and move interactive and prevent accidental file overwriting
+alias cp='cp -i'
+alias mv='mv -i'

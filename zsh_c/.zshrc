@@ -10,6 +10,10 @@ HISTFILE=~/.zsh_history
 # pure 
 fpath+=($HOME/.config/zsh/pure)
 autoload -U promptinit; promptinit
+# zstyle ':prompt:pure:path' color 031
+zstyle ':prompt:pure:prompt:success' color 076
+zstyle ':prompt:pure:prompt:continuation' color 064
+zstyle ':prompt:pure:git:dirty' color 208
 prompt pure
 
 # zsh-autocomplete
@@ -18,23 +22,23 @@ if [[ -f ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
 fi
 
 # enable colors in autocomplete for directories, files, aliases and commands
-export CLICOLOR=1
-zstyle ':completion:*:default' list-colors ''
-#zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-#zstyle ':completion:*' list-colors ''
-zstyle ':completion:*:options' list-colors '=^(-- *)=34'
-zstyle ':completion:*:aliases' list-colors '=*=2;38;5;128'
-zstyle ':completion:*:commands' list-colors '=*=1;31'
-zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
-
+# export CLICOLOR=1
+# zstyle ':completion:*:default' list-colors ''
+# #zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# #zstyle ':completion:*' list-colors ''
+# zstyle ':completion:*:options' list-colors '=^(-- *)=34'
+# zstyle ':completion:*:aliases' list-colors '=*=2;38;5;128'
+# zstyle ':completion:*:commands' list-colors '=*=1;31'
+# zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
+#
 # zsh-z 
 if [[ -f ~/.config/zsh/zsh-z.plugin.zsh ]]; then
   source ~/.config/zsh/zsh-z.plugin.zsh
 fi
 
 # zsh-autosuggestions
-if [[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -f ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # styling of autosuggestions
@@ -58,17 +62,11 @@ if [[ -f ~/.dotfiles/nnn_c/.config/nnn/nnn.config ]]; then
   source ~/.dotfiles/nnn_c/.config/nnn/nnn.config
 fi
 
-# tere directory navigator
-tere() {
-    local result=$(command tere "$@")
-    [ -n "$result" ] && cd -- "$result"
-}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # syntax highlighting
-if [[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -f ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # my custom shell functions
@@ -82,6 +80,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# starship
-# eval "$(starship init zsh)"
-# source ~/.zshrc_prompt
